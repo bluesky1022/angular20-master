@@ -1,0 +1,20 @@
+<main class="main">
+  <h1>{{num}}</h1>
+  <button (click)="Increment()">increment</button>
+  <button (click)="Decrement()">decrement</button>
+  <button (click)="Reset()">reset</button>
+  <button (click)="AutoIncrement()">AutoIncrement</button>
+  <br><br>
+  <h3>{{age()}}</h3>
+  @if(age() % 3 === 0)
+  {
+    <special-input [name]="'x'"/>
+  }
+  @else {
+    <special-input [name]="'x'"/>
+  }
+    <div *ngFor="let user of users">
+      {{user}}
+    </div>
+  
+  </main>
