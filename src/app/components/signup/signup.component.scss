@@ -1,0 +1,80 @@
+$primary-color: #4a90e2;
+$background-color: #f5f7fa;
+$input-border: #ccc;
+$input-focus-border: $primary-color;
+$btn-bg-color: $primary-color;
+$btn-hover-bg-color: $primary-color;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+main {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    input {
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      border: 1px solid $input-border;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $input-focus-border;
+        box-shadow: 0 0 5px rgba($primary-color, 0.5);
+      }
+    }
+  }
+
+  .btn-submit {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: $btn-bg-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $btn-hover-bg-color;
+    }
+  }
+}
