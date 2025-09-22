@@ -1,0 +1,89 @@
+// 404.scss
+
+$primary-color: #0070f3;
+$background-color: #f0f4f8;
+$text-color: #334155;
+$btn-bg: $primary-color;
+$btn-hover-bg: $primary-color;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: translateY(-20px);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+main, html {
+  margin: 0;
+  height: 100%;
+  background-color: $background-color;
+  font-family: $font-family;
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: 900;
+  color: $primary-color;
+  animation: bounce 2s infinite;
+  user-select: none;
+}
+
+.message {
+  h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0 1rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: $text-color;
+  }
+
+  .btn {
+    background-color: $btn-bg;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba($btn-bg, 0.4);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $btn-hover-bg;
+    }
+  }
+}
+
+// Responsive
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .message {
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
