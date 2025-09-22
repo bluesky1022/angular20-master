@@ -8,10 +8,5 @@ import { Router } from '@angular/router';
 })
 
 export class NotFound{
-
-    constructor(public router: Router){}
-    doSomething(e:any){
-        e.preventDefault();
-        this.router.navigate(['/dashboard']);
-    }
+    
 }
